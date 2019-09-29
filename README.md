@@ -1,3 +1,5 @@
+http://playercms.s3-website-ap-southeast-1.amazonaws.com
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
