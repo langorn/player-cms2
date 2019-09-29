@@ -1,0 +1,49 @@
+{
+  "players": [
+    {
+      "id": 1,
+      "name": "nikita",
+      "age": "19"
+    },
+    {
+      "name": "elvin2",
+      "age": "223",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "torro",
+      "age": "39"
+    },
+    {
+      "name": "aaaaKKKK",
+      "age": "17",
+      "id": 4
+    },
+    {
+      "name": "ccc",
+      "age": "17",
+      "id": 5
+    },
+    {
+      "name": "安安",
+      "age": "29931",
+      "id": 6
+    },
+    {
+      "name": "odoao",
+      "age": "1111",
+      "id": 7
+    },
+    {
+      "name": "ldak",
+      "age": "283",
+      "id": 8
+    },
+    {
+      "name": "kkkll",
+      "age": "93",
+      "id": 9
+    }
+  ]
+}
