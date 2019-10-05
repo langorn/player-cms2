@@ -6,15 +6,27 @@ import { connect } from 'react-redux'
 import { toggleSideBar } from '../actions'
 
 
-const LeftPanel = ({dispatch}) => {
+const mapStateToProps = (state, ownProps) => ({
+  display: ownProps.display
+})
 
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    toggleSideBar: () => dispatch(toggleSideBar(true))
+  }
+}
+
+
+class LeftPanel extends React.Component {
+  render() {
   return (
     <div className="leftPanel" style={{width:'45px',position:'absolute', top:'0px', backgroundColor:'#5d5d5d', minHeight:'100%'}}>
-      <button className="btn btn-primary" onClick={ () => { dispatch(toggleSideBar(false))} }>
+      <button className="btn btn-primary" onClick={ () => this.props.toggleSideBar() }>
         <i className="fa fa-arrows-h"></i>
       </button>
     </div>
   )
+  }
 }
 
-export default connect()(LeftPanel);
+export default connect(mapStateToProps, mapDispatchToProps)(LeftPanel);

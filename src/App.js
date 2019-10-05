@@ -5,16 +5,26 @@ import AddUser from './components/add-user'
 import ListUser from './components/list-user'
 import LeftPanel from './components/left-panel'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { connect } from 'react-redux'
 import React, { Component, useState , useEffect } from 'react';
 
-function App() {
+const mapStateToProps = (state) => {
+  return {
+    display: state.buttons.display
+  }
+}
+
+function App({display}) {
+  let displayStyle = display ? 'inline-block': 'none';
   return (
     <Router>
     <div style={{backgroundColor:'#f7f7f7'}}>
-      <Header/>
       <LeftPanel/>
-      <ListUser/>
+      <div style={{display:displayStyle, width:'100%'}}>
+        <div><h1>x{display}</h1></div>
+        <Header/>
+        <ListUser/>
+      </div>
       <Route exact path="/" />
     </div>
     </Router>
@@ -34,4 +44,4 @@ function Header() {
   )
 }
 
-export default App;
+export default connect(mapStateToProps)(App);
